@@ -6,8 +6,17 @@ describe Pizza do
   end
 end
 
-describe Topping do
+describe Topping do    
   it "exists" do
     expect(Topping).to be_a(Class)
+  end
+
+  describe '.initialize' do
+    it "sets the name of the topping" do
+      # The first line we added is essentially the same code we would run in irb
+      topping = Topping.new('olives')
+      # The second line is our expectation
+      expect(topping.name).to eq('olives')
+    end
   end
 end
