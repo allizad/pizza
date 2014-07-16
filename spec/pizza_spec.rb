@@ -18,5 +18,11 @@ describe Topping do
       # The second line is our expectation
       expect(topping.name).to eq('olives')
     end
+    # let's go ahead and use a keyword argument to store a topping's vegetarian status
+    it 'sets whether or not the topping is vegetarian' do
+      topping = Topping.new 'bell peppers', vegetarian: true
+      expect(topping.vegetarian).to eq(true)
+    end
   end
+
 end
